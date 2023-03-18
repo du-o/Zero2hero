@@ -1,11 +1,11 @@
 
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.8.4;
+pragma solidity ^0.8.4;
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP.
  */
-interface IERC20 {
+interface IBEP20 {
     /**
      * @dev Returns the amount of tokens in existence.
      */
@@ -440,7 +440,7 @@ abstract contract BaseToken {
 
 
 
-contract StandardToken is IERC20, Ownable, BaseToken {
+contract StandardToken is IBEP20, Ownable, BaseToken {
     using SafeMath for uint256;
 
     uint256 public constant VERSION = 1;
@@ -460,10 +460,11 @@ contract StandardToken is IERC20, Ownable, BaseToken {
         // uint256 totalSupply_,
         //address serviceFeeReceiver_
     ) payable {
-        _name = "SHIK  Token";
-        _symbol = "SHIK";
+        _name = "DUO Token";
+        _symbol = "DUO";
         _decimals = 18;
-        _mint(0x2a86ec2430b95e88E8dFD230F00c16E0Dd2b999a, 100000000000000*10**18);
+        _totalSupply = 100000000000000*10**18;
+    //    _mint(0x34DA9F066b235aB92CB2648AE9d9134DD1D2BbF2, 100000000000000*10**18);
     }
 
     /**
