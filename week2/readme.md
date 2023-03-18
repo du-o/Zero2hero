@@ -31,4 +31,4 @@
 - 调用 LPStaking 合约的 Add Pool 方法添加一个流动性挖矿的Pool，Pool 支持的质押 LP token 为 DUO Token ，并设置 Pool 的权重为 100
 - 调用 DUO Token 的 Approve 方法，授权 LPStaking 合约使用 100个 DUO token
 - 调用 LPStaking 合约的 Deposit 方法，往刚刚添加的 Pool 质押100个 DUO token，pid为精度可填0
-- 调用 LPStaking 合约的 Withdaw 方法，解除质押DUO token，并提取流动性挖矿奖励，获得KYO token
+- 调用 LPStaking 合约的 Withdraw 方法，解除质押DUO token，并提取流动性挖矿奖励，获得KYO token
